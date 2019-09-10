@@ -1,0 +1,31 @@
+import java.io.File;
+import java.util.Scanner;
+
+public class ScannerFileTest {
+    public static void main(String[] args) throws Exception {
+        Scanner sc = new Scanner(new File("ScannerKeyBoardTest.java"));
+        System.out.println("ScannerFileTest.java文件的内容如下：");
+        while(sc.hasNextLine()){
+            System.out.println(sc.nextLine());
+        }
+    }
+}
+
+
+
+
+
+import java.util.Scanner;
+
+public class ScannerKeyBoardTest {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+//      增加下面一行将只把回车作为分隔符；
+//        sc.useDelimiter("\n");
+//      判断是否还有下一项输入，将该输入进行输出展示
+        while(sc.hasNext()) {
+            System.out.println("键盘输入的内容为：" + sc.next());
+        }
+    }
+}
